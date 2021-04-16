@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <title>Welcome to My Website</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,900|Source+Sans+Pro:300,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/04a154413f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../../index.html" class="logo-name"
+          >Rodrigo <i class="fas fa-laptop-code"></i
+        ></a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="../../index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="../../pages/blog.html" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="../../index.html" class="nav-link">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </header>
+
+    <!-- Main -->
+
+    <main>
+      <!-- About me -->
+
+      <section class="blog">
+        <h1 class="blog-title">Relative Units</h1>
+        <article class="blog-article">
+          <h3>Pixels</h3>
+          <p>
+            In this article I will be covering a topic that many of us find
+            complicated at first and prefer to postpone its learning, but trust
+            me, it is worth investing your time on this topic, the relative
+            units.
+          </p>
+          <p>
+            HTML has been around for 26 years, and pixels have been around as a
+            layout measuring unit since then. Pixels did not came out with the
+            web, but the pixels we use in the web are not exactly the same
+            pixels we knew from before. With that in mind, I thing we should
+            question our trust on them.
+          </p>
+          <h3>Pixels are not absolute</h3>
+          <p>
+            Not particularly the ones on the web. In fact, their size vary based
+            on multiple factors: screen resolution, browser renderer, and device
+            renderer, <strong>'1px'</strong> is not the same distance every time
+            your UI loads. Knowing that: how far can we rely on an "absolute
+            unit" that is not absolute?
+          </p>
+          <h3>Font based units</h3>
+          <p>
+            The containers and boxes are sized relatively to the text. We want
+            our content to be placed surrounded by the boxes and borders we set.
+          </p>
+          <p>
+            Luckily, CSS provides us with some good tools to solve this problem,
+            I will only mention the 3 main ones:
+          </p>
+          <ul>
+            <li>
+              <p>
+                <strong>ch:</strong> ch: a typographic measure based on the
+                length of the character 0 (zero).
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>em:</strong> a typographic measure based on the length
+                of the character 'm'.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>rem:</strong> a web measure based on the
+                <strong>'em'</strong> of the root element.
+              </p>
+            </li>
+          </ul>
+          <h3>'em' vs 'ch'</h3>
+          <p>
+            Now, we need to choose which one gets the job done in a more and
+            consistent way. In order to choose, it's required first to
+            understand how each of them are defined.
+          </p>
+          <p>
+            In CSS, the <strong>'em'</strong> is a general unit of length
+            related directly to font size. We use it to define widths, heights,
+            padding, margins and other measurements in both horizontal and
+            vertical directions – something typographers with a traditional
+            background may find surprising. The <strong>'em'</strong> unit can
+            also be used to define the font size itself.
+          </p>
+          <p>
+            The <strong>'ch'</strong> unit can be useful if you want to set
+            lengths or sizes which relate directly to the width of the font.
+          </p>
+          <h3>The 'm' and its width</h3>
+          <p>
+            Probably the first question your are asking yourself is, "Why the
+            <strong>'m'</strong> ?" When creating a new typeface, designers use
+            (or used) a squared block (kerning) which served as reference to
+            assure each character was proportionally designed in comparison to
+            the other ones. The <strong>'m'</strong> is the only character in
+            our entire alphabet that would touch the left and right boundaries
+            of this box. So, <strong>'1em'</strong> is actually the maximal
+            width of a character, regardless of which font-family it belongs to.
+          </p>
+          <h3>Absolute zero</h3>
+          <p>
+            The number zero is normally the average width of all characters
+            (alphanumeric) in a typeface. The
+            <strong>'ch'</strong> is, therefore, an estimation of the character
+            length for a specific font, hence its name (character).
+          </p>
+          <p>
+            Because the zero is an average, it becomes a more reliable unit than
+            <strong>'em'</strong>. On the event of a font-family changing for
+            the content, the <strong>'5ch'</strong> will continue to be the
+            length of 5 characters, whilst <strong>'1em/1rem'</strong> may
+            change for more or less than before. In a nutshell,
+            <strong>'1ch'</strong> in <strong>Times New Roman</strong> displays
+            a different distance than <strong>'1ch'</strong> in
+            <strong>'Helvetica'</strong> which would be also different than in a
+            monospace typeface.
+          </p>
+          <h3>Using percentages</h3>
+          <p>
+            The use of percentages is very common and powerful, but can also be
+            tricky. Depending on the CSS property which you're adding a value
+            to, the percentage relates to a different measure. For padding and
+            margin, for example, the percentage relates to the width of the
+            containing box (regardless if it is vertical or horizontal
+            padding/margin).
+          </p>
+          <div class="code-container">
+            <div class="code-wrapper">
+              <pre class="code">
+              .wrapper {
+                width: 10rem; 
+                
+                height: 3rem;
+              } 
+              
+              .child { 
+                padding-top: 10%; /* 1rem */ 
+                
+                margin-top: 10%; /* 1rem */ 
+              }
+            </pre
+              >
+            </div>
+          </div>
+          <p>
+            Also, if for example you're intending to set a percentage value to
+            width, height, and its derivatives, the fraction will correspond to
+            its container, so height: 50% is half the height of the elements
+            container (given it has a measurable length at parsing time).
+          </p>
+          <div class="code-container">
+            <div class="code-wrapper">
+              <pre class="code">
+                .parent {
+                  width: 40rem;
+                
+                  height: 20rem;
+                }
+                
+                .child {
+                  width: 50%; /* 20rem */
+                
+                  height: 70%; /* 14rem */
+                }
+              </pre>
+            </div>
+          </div>
+          <p>
+            To some extent, I like to think <strong>'%'</strong> as the
+            <strong>'em'</strong>
+            equivalent of viewport sizes. They are both extremely powerful, but
+            they also require a level of understanding on how CSS rendering will
+            work and a more strategic view of how the UI elements will integrate
+            and interact with each other because they depend on the context
+            where they are inserted.
+          </p>
+          <h3>Viewport based units</h3>
+          <p>
+            Viewports, on the other hand, are much more intuitive. It is part of
+            CSS3, so they are quite new, though their learning curve helps a lot
+            on advocating towards their usage.
+          </p>
+          <ul>
+            <li>
+              <p>
+                <strong>vh:</strong> Viewport height. <strong>1vh</strong> is
+                <strong>1%</strong>
+                of the actual viewport's height.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>vw:</strong> Viewport width. <strong>1vw</strong> is
+                <strong>1%</strong>
+                of the actual viewport's width.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>vmax:</strong> Viewport max. <strong>1vmax</strong> is
+                <strong>1%</strong> of the viewport's biggest dimension
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>vmin:</strong> Viewport min. <strong>1vmin</strong> is
+                <strong>1%</strong> of the viewport's smallest dimension
+              </p>
+            </li>
+          </ul>
+          <p>
+            As you may have come to realise, the viewport units do not depend on
+            the context they are inserted into. So, to keep the comparison
+            between units: if <strong>'%'</strong> is the
+            <strong>'em'</strong> of viewport, viewport units are the
+            <strong>'rem'</strong> .
+          </p>
+          <h3>So what should we use?</h3>
+          <p>
+            It's not actually a question of what to use, but more a question of
+            when should we use which.
+          </p>
+          <p>
+            In other words, we should try to find the message on the layout we
+            are creating, once we do that, the best unit will reveal itself as
+            the one which is more likely to provide a reliable measure of it.
+          </p>
+          <p>
+            Let's go through a quick example, if you have a piece of display
+            text-base (e.g.: a blog post), you can narrow it down your options
+            to
+            <strong>'rem'</strong> , <strong>'em'</strong> , or
+            <strong>'ch'</strong> . Now, does the specific element in question
+            depends on its parent? (if yes, <strong>'em'</strong> or
+            <strong>'ch'</strong> probably). Do you need it to be scalable in
+            case you switch typefaces? (if yes, definitely
+            <strong>'ch'</strong> ). Of course, this situation is
+            oversimplified, but I believe it would provide a good understanding
+            of the topic
+          </p>
+          <p>
+            Remember, there is no silver bullet and do not be shy of using every
+            resource at your disposal.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <a href="mailto:rod_novaes@hotmail.com" class="footer-link"
+        >rod_novaes@hotmail.com</a
+      >
+      <ul class="social-list">
+        <li class="social-list-item">
+          <a
+            class="social-list-link"
+            href="https://github.com/RodrigoN01"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li class="social-list-item">
+          <a
+            class="social-list-link"
+            href="https://www.linkedin.com/in/rodnovaes/"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </li>
+        <li class="social-list-item">
+          <a
+            class="social-list-link"
+            href="https://twitter.com/Rod_Novaes"
+            target="_blank"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>
