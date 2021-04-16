@@ -320,6 +320,7 @@ header {
 }
 
 .articles-list {
+  padding-left: 0;
   list-style: none;
   font-family: var(--ff-primary);
   font-size: var(--fs-h3);
