@@ -10,6 +10,11 @@
       href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,900|Source+Sans+Pro:300,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
     <script
       src="https://kit.fontawesome.com/04a154413f.js"
       crossorigin="anonymous"
@@ -47,8 +52,6 @@
     <!-- Main -->
 
     <main>
-      <!-- About me -->
-
       <section class="blog">
         <h1 class="blog-title">Relative Units</h1>
         <article class="blog-article">
@@ -159,9 +162,9 @@
             containing box (regardless if it is vertical or horizontal
             padding/margin).
           </p>
-          <div class="code-container">
-            <div class="code-wrapper">
-              <pre class="code">
+
+          <pre>
+            <code>
               .wrapper {
                 width: 10rem; 
                 
@@ -169,37 +172,35 @@
               } 
               
               .child { 
-                padding-top: 10%; /* 1rem */ 
+                padding-top: 10%; /* 1rem */
                 
-                margin-top: 10%; /* 1rem */ 
+                margin-top: 10%; /* 1rem */
               }
-            </pre
-              >
-            </div>
-          </div>
+            </code>
+          </pre>
+
           <p>
             Also, if for example you're intending to set a percentage value to
             width, height, and its derivatives, the fraction will correspond to
             its container, so height: 50% is half the height of the elements
             container (given it has a measurable length at parsing time).
           </p>
-          <div class="code-container">
-            <div class="code-wrapper">
-              <pre class="code">
-                .parent {
-                  width: 40rem;
-                
-                  height: 20rem;
-                }
-                
-                .child {
-                  width: 50%; /* 20rem */
-                
-                  height: 70%; /* 14rem */
-                }
-              </pre>
-            </div>
-          </div>
+          <pre>
+            <code>
+              .parent {
+                width: 40rem;
+              
+                height: 20rem;
+              }
+              
+              .child {
+                width: 50%; /* 20rem */
+              
+                height: 70%; /* 14rem */
+              }
+            </code>
+          </pre>
+
           <p>
             To some extent, I like to think <strong>'%'</strong> as the
             <strong>'em'</strong>
@@ -319,5 +320,8 @@
     </footer>
 
     <script src="/js/app.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>

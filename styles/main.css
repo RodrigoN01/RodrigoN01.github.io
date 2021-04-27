@@ -398,31 +398,7 @@ header {
   font-family: var(--ff-primary);
 }
 
-pre {
-  text-align: left;
-  white-space: pre-line;
-  font-size: 1.3rem;
-}
-
-.code-wrapper {
-  margin-left: 1.8rem;
-  padding: 2rem 0;
-}
-
-.code-container {
-  position: relative;
-  margin: 2rem;
-  border-radius: 50px;
-  background-color: var(--clr-dark);
-  color: var(--clr-light);
-}
-
 @media (min-width: 640px) {
-  .code-wrapper {
-    margin-left: 4rem;
-    padding: 2rem 0;
-  }
-
   .chart-container {
     margin: 0 auto;
     max-width: 900px;
@@ -501,4 +477,13 @@ pre {
 
 .social-list-link {
   padding: 0.5em;
+}
+
+/* pre  tags */
+
+pre {
+  width: 85%;
+  margin: auto;
+  font-size: 1.2rem;
+  white-space: pre-line;
 }

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <title>Welcome to My Website</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,900|Source+Sans+Pro:300,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    />
+    <script
+      src="https://kit.fontawesome.com/04a154413f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="logo">
+          <a href="/index.html" class="logo-name"
+            >Rodrigo <i class="fas fa-laptop-code"></i
+          ></a>
+        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="/index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/pages/blog.html" class="nav-link">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="/index.html" class="nav-link">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a href="/index.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+    <!-- Main -->
+
+    <main>
+      <section class="blog">
+        <h1 class="blog-title">JavaScript and DOM</h1>
+        <article class="blog-article">
+          <p>
+            In this article we will cover the basic concepts of
+            <strong>JavaScript</strong> and how to navigate and traverse the
+            <strong>DOM</strong>, in order to make your website interactive.
+          </p>
+
+          <h3>JavaScript and HTML CSS</h3>
+          <p>
+            It is important to understand a little bit of the history of the
+            language. <strong>JavaScript</strong> was created in 1995 by Brendan
+            Eich while he was an engineer at Netscape.
+            <strong>JavaScript</strong> was first released with Netscape 2 early
+            in 1996. It was originally going to be called LiveScript, but it was
+            renamed in an ill-fated marketing decision that attempted to
+            capitalize on the popularity of Sun Microsystem's
+            <strong>Java</strong> language — despite the two having very little
+            in common. This has been a source of confusion ever since.
+          </p>
+          <p>
+            So far we have learnt that, <strong>HTML</strong> and
+            <strong>CSS</strong> are programming languages (in my opinion, some
+            may disagree), that don't use logic, <strong>HTML</strong> is where
+            you set the basic structure of the page, is the most basic building
+            block of the Web, It defines the meaning and structure of web
+            content and <strong>CSS</strong> where you give style to that page.
+            <strong>JavaScript</strong> is an advanced programming language that
+            makes web pages more interactive and dynamic. It manipulates content
+            to create dynamic web pages.
+          </p>
+          <p>
+            My analogy to understand these three concepts, think of
+            <strong>HTML</strong> and <strong>CSS</strong> as the structure of
+            the car, the paint job and all the accessories.
+            <strong>JavaScript</strong> is the engine that makes it run, it
+            provides fuel to the car so you can interact with it.
+          </p>
+
+          <h3>Control Flow and Loops</h3>
+          <p>
+            The control flow is the order in which the computer executes
+            statements in a script. In <strong>JavaScript</strong>, we read the
+            code starting from the first line till the last line unless of
+            course in the code there is some instructions or statements that
+            changes that control flow.
+          </p>
+          <p>
+            The most well known control flow is the
+            <strong>'if'/'else'</strong> statement. For instance, you want a
+            website to show a page <strong>'if'</strong> you are older than 18,
+            otherwise or <strong>'else'</strong>, the website would render a
+            different page, this is a conditional statement. The code would be
+            something like this:
+          </p>
+          <pre>
+                <code>
+                  if(age === 18) {
+                    // Load the page
+                  } else {
+                    // Warning page!
+                  }
+                </code>
+            </pre>
+          <p>
+            Another very common conditional statement used as control flow is
+            the <strong>'switch'</strong> statement
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <a href="mailto:rod_novaes@hotmail.com" class="footer-link"
+        >rod_novaes@hotmail.com</a
+      >
+      <ul class="social-list">
+        <li class="social-list-item">
+          <a
+            class="social-list-link"
+            href="https://github.com/RodrigoN01"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li class="social-list-item">
+          <a
+            class="social-list-link"
+            href="https://www.linkedin.com/in/rodnovaes/"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </li>
+        <li class="social-list-item">
+          <a
+            class="social-list-link"
+            href="https://twitter.com/Rod_Novaes"
+            target="_blank"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="/js/app.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
