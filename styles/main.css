@@ -482,7 +482,13 @@ header {
 /* pre  tags */
 
 pre {
-  width: 85%;
-  margin: auto;
+  width: 90%;
+  margin: 1em auto;
   font-size: 1.2rem;
+}
+
+@media (min-width: 640px) {
+  pre {
+    width: 50%;
+  }
 }
