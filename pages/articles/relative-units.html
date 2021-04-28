@@ -162,45 +162,36 @@
             containing box (regardless if it is vertical or horizontal
             padding/margin).
           </p>
-
-          <pre>
-<code>
-.wrapper {
-  width: 10rem; 
+          <pre><code> .wrapper {
+   width: 10rem; 
   
-  height: 3rem;
-} 
+   height: 3rem;
+ } 
 
-.child { 
-  padding-top: 10%; /* 1rem */
+ .child { 
+   padding-top: 10%; /* 1rem */
   
-  margin-top: 10%; /* 1rem */
-}
-</code>
-          </pre>
-
+   margin-top: 10%; /* 1rem */
+ }
+</code></pre>
           <p>
             Also, if for example you're intending to set a percentage value to
             width, height, and its derivatives, the fraction will correspond to
             its container, so height: 50% is half the height of the elements
             container (given it has a measurable length at parsing time).
           </p>
-          <pre>
-<code>
-.parent {
-  width: 40rem;
+          <pre><code> .parent {
+   width: 40rem;
 
-  height: 20rem;
-}
+   height: 20rem;
+ }
 
-.child {
-  width: 50%; /* 20rem */
+ .child {
+   width: 50%; /* 20rem */
 
   height: 70%; /* 14rem */
-}
-</code>
-          </pre>
-
+ }
+</code></pre>
           <p>
             To some extent, I like to think <strong>'%'</strong> as the
             <strong>'em'</strong>
