@@ -338,6 +338,7 @@ header {
   font-family: var(--ff-secondary);
   margin-bottom: 2.5em;
   text-align: center;
+  box-shadow: var(--bs);
 }
 
 .articles-item a,
@@ -361,6 +362,15 @@ header {
   margin-top: 1.5rem;
   font-size: 1.5rem;
   text-align: justify;
+}
+
+.blog-article img {
+  margin: auto;
+}
+
+.blog-list {
+  font-family: var(--ff-primary);
+  font-size: 1.5rem;
 }
 
 .chart-container {
@@ -482,13 +492,7 @@ header {
 /* pre  tags */
 
 pre {
-  width: 90%;
+  width: 95%;
   margin: 1em auto;
   font-size: 1.2rem;
-}
-
-@media (min-width: 640px) {
-  pre {
-    width: 50%;
-  }
 }
