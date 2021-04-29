@@ -343,6 +343,7 @@ header {
 
 .articles-item a,
 .articles-item a:visited {
+  display: block;
   color: var(--clr-dark);
   text-decoration: none;
 }
