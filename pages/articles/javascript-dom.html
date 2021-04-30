@@ -206,14 +206,23 @@
   // 21
   // 31</code></pre>
           <h3>The DOM</h3>
-          <p>According to <strong>W3C</strong>, the document object model (DOM) is an "application programming interface for valid HTML and well-formed XML documents. It defines the logical structure of documents and the way a document is accessed and manipulated".</p>
-          <p>In simple terms, the DOM is a representation of your HTML to the browser and allows you to manipulate the page.</p>
+          <p>
+            According to <strong>W3C</strong>, the document object model (DOM) is an "application programming interface for valid HTML and well-formed XML documents. It defines the logical structure of documents and the way a document is accessed and manipulated".
+          </p>
+          <p>
+            In simple terms, the DOM is a representation of your HTML to the browser and allows you to manipulate the page.
+          </p>
           <img src="/img/DOM.png" alt="the DOM">
-          <p>It is often referred to as a tree because the <strong>DOM</strong> with a single parent item that branches out into children items. These children items can also branch out into their own smaller trees like what you see in the photo above.</p>
-          <p>While the <strong>DOM</strong> sounds like this super intimidating thing, it's actually how browsers determine what is rendered on our page and, through <strong>JavaScript</strong>, is how we can manipulate those elements that are rendered.</p>
+          <p>
+            It is often referred to as a tree because the <strong>DOM</strong> with a single parent item that branches out into children items. These children items can also branch out into their own smaller trees like what you see in the photo above.
+          </p>
+          <p>
+            While the <strong>DOM</strong> sounds like this super intimidating thing, it's actually how browsers determine what is rendered on our page and, through <strong>JavaScript</strong>, is how we can manipulate those elements that are rendered.
+          </p>
           <h3>Objects and Arrays</h3>
           <p><strong>Objects</strong></p>
-          <p>Objects are used to represent a “thing” in your code. That could be a person, a car, a building, a book, a character in a game — basically anything that is made up or can be defined by a set of characteristics. In objects, these characteristics are called properties that consist of a key and a value.
+          <p>
+            Objects are used to represent a “thing” in your code. That could be a person, a car, a building, a book, a character in a game — basically anything that is made up or can be defined by a set of characteristics. In objects, these characteristics are called properties that consist of a key and a value.
           </p>
 <pre><code> // Basic object syntax
  const object = {
@@ -228,7 +237,9 @@
  };
 </code></pre>
           <p><strong>Accessing data from objects</strong></p>
-          <p>Properties in objects can be accessed, added, changed, and removed by using either dot or bracket notation. To get the value of the age key in our personobject with both dot and bracket notation, we’d write:</p>
+          <p>
+            Properties in objects can be accessed, added, changed, and removed by using either dot or bracket notation. To get the value of the age key in our personobject with both dot and bracket notation, we’d write:
+          </p>
 <pre><code> // Dot notation
  person.age // returns 33
 
@@ -236,27 +247,41 @@
  person['age'] // returns 33
 </code></pre>          
           <p><strong>Arrays</strong></p>
-          <p>We use arrays whenever we want to create and store a list of multiple items in a single variable. Arrays are especially useful when creating ordered collections where items in the collection can be accessed by their numerical position in the list. Just as object properties can store values of any primitive data type (as well as an array or another object), so too can arrays consist of strings, numbers, booleans, objects, or even other arrays.</p>
+          <p>
+            We use arrays whenever we want to create and store a list of multiple items in a single variable. Arrays are especially useful when creating ordered collections where items in the collection can be accessed by their numerical position in the list. Just as object properties can store values of any primitive data type (as well as an array or another object), so too can arrays consist of strings, numbers, booleans, objects, or even other arrays.
+          </p>
           <p><strong>Accessing data from arrays</strong></p>
-          <p>Arrays use zero-based indexing, so the first item in an array has an index of 0, the second item an index of 1, and so on. For instance, let’s say we wanted to access the third item (‘Mexico City’) in the following array:</p>
+          <p>
+            Arrays use zero-based indexing, so the first item in an array has an index of 0, the second item an index of 1, and so on. For instance, let’s say we wanted to access the third item (‘Mexico City’) in the following array:
+          </p>
 <pre class="lang-js"><code> const cities = ['Tokyo', 'Bali', 'Mexico City', 'Vancouver'];
 
  cities[2]; // returns 'Mexico City'
 </code></pre>
-          <p>Objects represent “things” with characteristics (aka properties), while arrays create and store lists of data in a single variable. Both dot and bracket notation allow us to access, add, change, and remove items from an object, while zero-based indexing and a variety of built-in methods let us access and alter items in an array. </p>
+          <p>
+            Objects represent “things” with characteristics (aka properties), while arrays create and store lists of data in a single variable. Both dot and bracket notation allow us to access, add, change, and remove items from an object, while zero-based indexing and a variety of built-in methods let us access and alter items in an array.
+          </p>
           <h3>Functions</h3>
           <p><strong>What is a Function?</strong></p>
-          <p>A function is a subprogram designed to perform a particular task. Functions are executed when they are called. This is known as invoking a function. Values can be passed into functions and used within the function. Functions always <strong>return</strong> a value. In <strong>JavaScript</strong>, if no <strong>return</strong> value is specified, the function will return <strong>undefined</strong></p>
+          <p>
+            A function is a subprogram designed to perform a particular task. Functions are executed when they are called. This is known as invoking a function. Values can be passed into functions and used within the function. Functions always <strong>return</strong> a value. In <strong>JavaScript</strong>, if no <strong>return</strong> value is specified, the function will return <strong>undefined</strong>. 
+          </p>
           <p><strong>Define a function</strong></p>
-          <p>A <strong>Function Declaration</strong> defines a named function. To create a function declaration you use the function keyword followed by the name of the function. When using function declarations, the function definition is hoisted, thus allowing the function to be used before it is defined.</p>
+          <p>
+            A <strong>Function Declaration</strong> defines a named function. To create a function declaration you use the function keyword followed by the name of the function. When using function declarations, the function definition is hoisted, thus allowing the function to be used before it is defined.
+          </p>
 <pre><code> function name(parameters){
    statements
  }
 </code>
 </pre>
           <p><strong>Parameters vs Arguments</strong></p>
-          <p>If you’re new to JavaScript, you may have heard the terms parameters and arguments used interchangeably. While very similar, there is an important distinction to make between these two keywords.</p>
-          <p><strong>Parameters</strong> are used when defining a function, they are the names created in the function definition. In fact, during a function definition, we can pass in up to 255 parameters! Parameters are separated by commas in the (). Here’s an example with two parameters — <strong>param1</strong> & <strong>param2</strong>:</p>
+          <p>
+            If you’re new to JavaScript, you may have heard the terms parameters and arguments used interchangeably. While very similar, there is an important distinction to make between these two keywords.
+          </p>
+          <p>
+            <strong>Parameters</strong> are used when defining a function, they are the names created in the function definition. In fact, during a function definition, we can pass in up to 255 parameters! Parameters are separated by commas in the (). Here’s an example with two parameters — <strong>param1</strong> & <strong>param2</strong>:
+          </p>
 <pre><code>  const param1 = true;
   const param2 = false;
   function twoParams(param1, param2){
@@ -264,7 +289,9 @@
   }
 </code>
 </pre>
-          <p><strong>Arguments</strong>, on the other hand, are the values the function receives from each parameter when the function is executed (invoked). In the above example, our two arguments are true & false.</p>
+          <p>
+            <strong>Arguments</strong>, on the other hand, are the values the function receives from each parameter when the function is executed (invoked). In the above example, our two arguments are true & false.
+          </p>
           <p>
             That was a lot of information, and there is still a lot to cover in
             this topic. <strong>JavaScript</strong> has unlimited possibilities,
