@@ -10,6 +10,12 @@
       href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,900|Source+Sans+Pro:300,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/vs2015.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    />
     <script
       src="https://kit.fontawesome.com/04a154413f.js"
       crossorigin="anonymous"
@@ -51,22 +57,88 @@
         <section class="blog">
         <h1 class="blog-title">Problem Solving</h2>
         <article class="blog-article">
+          <h3>Blocked on a simple problem</h3>
+          <p>
+            In some of the <strong>'kata'</strong> exercises, I got stuck on simple parts of the problem solving, sometimes because I didn't remember the methods to use and sometimes because I knew the syntax but I didn't know how to put them together to solve the problem
+          </p>
+          <p>
+            In this particular case, I wasn't necessarily blocked, I knew the solution, but I wanted to solve it in a different and more elegant way.
+          </p>
+          <p>
+            In order to solve this problem, first, I've <strong>'googled'</strong> it, I got pretty close to fining the solution, there was just a few syntax error I was missing,then afterwards I had to ask the coaches for help.
+          </p>
+          <p><strong>Gradebook Problem</strong></p>
+          <p>Initially I was hard coding the objects.</p>
+<pre><code> let gradebook = {
+   Elizabeth : {
+     testScores: scores[3]
+   },
+   Wiremu: {
+     testScores: scores[2]
+   },
+   Susan: {
+     testScores: scores[1]
+   },
+   Joseph: {
+     testScores: scores[0]
+   }
+ }
+</code></pre>
+          <p>
+            However, I knew there was a way to create the objects by looping through the <strong>'students'</strong> array. And this was my elegant solution for this part.
+          </p>
+<pre><code> let gradebook = {}
+
+ for (let i = 0; i < students.length; i++){
+   gradebook[students[i]] = {testScores: scores[i]}
+ }
+</code></pre>
+          <p>It outputs the same result but in a more elegant way using logic.</p>
+          <p>
+            I've learnt that there are many different ways to solve the same problem, many different approaches to tackle the problem. It can be frustrating at times, and most of the times you will end up refactoring your solution to a cleaner and more elegant code.
+          </p>
           <h3>Pseudocode</h3>
-          <p>...</p>
+          <p>
+            Your are basically writing a step-by-step <strong>'recipe'</strong> of your code in your own language before actually writing code.
+          </p>
+          <p>
+            This method is my second favorite, behind <strong>'Googling'</strong>, it can be used in conjunction with other methods and it is very handy in more complex cases where you have to break down your solution in small parts.
+          </p>
           <h3>The Rubber Ducky Method</h3>
-          <p>...</p>
+          <p>
+            In the <strong>software development</strong> world, the <strong>Rubber Ducky Method</strong> is known to be very helpful. The developer would carry a rubber duck around and when he is debugging a code, he would pull the little ducky and start explaining the problem to it. In many cases, you would find a solution just by verbalizing your thought process.
+          </p>
+          <p>
+            This method was a surprise for me, It was the first time I've heard of it. I will try to use it some day. I may have done this unconsciously.
+          </p>
           <h3>Console.logging</h3>
-          <p>...</p>
+          <p>
+            By using the <Strong>'console.log'</Strong> method, you get useful information to understand the code you just wrote and if your code is running correctly.
+          </p>
+          <p>
+            I use it a lot, it is almost as if I was testing each part of the code to see if I'm going to the right direction.
+          </p>
           <h3>Googling</h3>
-          <p>...</p>
-          <h3>Trying Something</h3>
-          <p>...</p>
-          <h3>Asking your peers for help</h3>
-          <p>...</p>
+          <p>My favorite method!</p>
+          <p>
+            I tend to say, that when I don't know something, "I am one google way from knowing it". It is the 'oracle' of the world, every thing is there not only in the programing world, but in many different areas. Specifically in the programming world, if encounter a problem, there is a great chance that someone else has already encountered that same problem and there will be a solution posted on 'Stack Overflow' or on another forum/community on <strong>Google</strong>.
+          </p>
+          <p>
+            Since it is owned by <strong>Google</strong>, I will include <strong>YouTube</strong> as part of the same method, in many cases, I search on <strong>Youtube</strong> first before asking <strong>Google</strong>. I appreciate the visual understanding of what I'm after.
+          </p>
+          <p>So yes, trust the oracle and you will get what you were searching for.</p>
+          <h3>Asking peers for help</h3>
+          <p>
+            I've used this in the past when I was studying by myself doing online courses. I've joined several programming communities on <strong>Discord, Slack, Youtube</strong> etc. It can be very helpful, but when it gets too complex, unless you are in person, the back and forth on the 'chat' can be frustrating. So I try not to use this method too often, unless I'm in person.
+          </p>
           <h3>Asking coaches for help</h3>
-          <p>...</p>
-          <h3>Improving</h3>
-          
+          <p>
+            Similarly to the circumstances above, unless I can talk to the person in front of me, I don't like asking for help via 'chat', exception when it is a simple question. A more complex problem can become frustrating for both sides.
+          </p>
+          <h3>Improving with reflection</h3>
+          <p>
+            I've been practicing this method since I have started the course at EDA, and it has been showing very effective, you take your time to step back and review your efforts, your mistakes and your achievements. It can help you develop your skills and gives you the opportunity to compere your today-self with your yesterday-self and therefore evolve.
+          </p>
         </article>
       </section>
     </main>
@@ -109,5 +181,8 @@
     </footer>
 
     <script src="/js/app.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>
