@@ -1,7 +1,6 @@
 html,
 body {
   height: 100%;
-  font-family: 'Open Sans', sans-serif;
 }
 
 main {
@@ -19,16 +18,20 @@ main {
 }
 
 #message {
+  margin: 1em 0;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .board {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .board div {
-  color: green;
+  cursor: pointer;
+  color: var(--clr-accent);
   font-size: 2rem;
   width: 75px;
   height: 75px;
@@ -41,13 +44,34 @@ main {
   justify-content: center;
 }
 
+.btn {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.restart-btn {
+  visibility: hidden;
+  cursor: pointer;
+  background: var(--clr-accent);
+  padding: 1em 2em;
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-body);
+  margin: 2.5em;
+  border: none;
+  box-shadow: var(--bs);
+}
+
+.restart-btn:active {
+  transform: scale(0.9);
+}
+
 .board div:hover {
   background-color: white;
 }
 
 div.mine,
 div.mine:hover {
-  background: no-repeat center/60% url('images/bomb.svg') crimson;
+  background: no-repeat center/60% url('images/bug-svgrepo-com.svg') crimson;
 }
 
 div.hidden {
@@ -60,5 +84,17 @@ div.hidden:hover {
 
 div.marked,
 div.marked:hover {
-  background: no-repeat center/60% url('images/mark.svg') deepskyblue;
+  background: no-repeat center/60% url('images/bug-svgrepo-com\ \(1\).svg')
+    var(--clr-accent);
+}
+
+@media (max-width: 640px) {
+  .board {
+    max-width: 455px;
+  }
+
+  .board div {
+    width: 67px;
+    height: 67px;
+  }
 }

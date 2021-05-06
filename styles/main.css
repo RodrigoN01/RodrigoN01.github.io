@@ -237,7 +237,7 @@ header {
   color: var(--clr-light);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 800px) {
   .nav {
     position: static;
     background: var(--clr-light);
