@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="minesweeper.css" />
     <title>Welcome to My Website</title>
     <link
       href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,900|Source+Sans+Pro:300,900&display=swap"
@@ -51,39 +52,11 @@
     <!-- Main -->
 
     <main>
-      <!-- Blog Articles -->
-
+      <!-- Minesweeper -->
       <section class="articles">
-        <h2 class="articles-title">My articles</h2>
-        <ul class="articles-list">
-          <li class="articles-item">
-            <a href="/pages/articles/learning-plan.html">Learning Plan</a>
-          </li>
-          <li class="articles-item">
-            <a href="/pages/articles/identity-values.html"
-              >Identity and Values</a
-            >
-          </li>
-          <li class="articles-item">
-            <a href="/pages/articles/emotional-intelligence.html"
-              >Emotional Intelligence</a
-            >
-          </li>
-          <li class="articles-item">
-            <a href="/pages/articles/neuroplasticity.html"
-              >Neuroplasticity and Growth Mindset</a
-            >
-          </li>
-          <li class="articles-item">
-            <a href="/pages/articles/problem-solving.html">Problem Solving</a>
-          </li>
-          <li class="articles-item">
-            <a href="/pages/articles/relative-units.html">Relative Units</a>
-          </li>
-          <li class="articles-item">
-            <a href="/pages/articles/javascript-dom.html">JavaScript and DOM</a>
-          </li>
-        </ul>
+        <div id="message"></div>
+        <div id="notes"></div>
+        <div class="board"></div>
       </section>
     </main>
 
@@ -125,5 +98,24 @@
     </footer>
 
     <script src="/js/app.js"></script>
+    <script src="lib/tests.js"></script>
+    <script src="lib/lib.js"></script>
+    <script src="minesweeper.js"></script>
   </body>
 </html>
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="minesweeper.css" />
+    <script src="lib/tests.js"></script>
+    <script src="lib/lib.js"></script>
+    <script src="minesweeper.js"></script>
+  </head>
+  <body>
+    <div id="message"></div>
+    <div id="notes"></div>
+    <div class="board"></div>
+  </body>
+</html> -->
