@@ -4,9 +4,9 @@ body {
 }
 
 main {
+  margin-top: 2em;
   display: flex;
   align-items: center;
-  justify-content: flex-center;
   flex-direction: column;
 }
 
@@ -50,12 +50,12 @@ main {
 }
 
 .restart-btn {
-  visibility: hidden;
   cursor: pointer;
   background: var(--clr-accent);
   padding: 1em 2em;
   font-family: var(--ff-secondary);
   font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
   margin: 2.5em;
   border: none;
   box-shadow: var(--bs);

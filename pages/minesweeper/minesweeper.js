@@ -35,17 +35,11 @@ function checkForWin() {
     if ((cell.isMine && !cell.isMarked) || (!cell.isMine && cell.hidden)) {
       winner = false;
     }
-    displayBtn();
   });
 
   if (winner) {
     displayMessage('🕵🏻‍♂️ BUGS NEUTRALIZED 🕵🏻‍♂️');
   }
-}
-
-function displayBtn() {
-  let btn = document.querySelector('.restart-btn');
-  btn.style.visibility = 'visible';
 }
 
 function countSurroundingMines(cell) {
