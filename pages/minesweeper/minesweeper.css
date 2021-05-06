@@ -91,7 +91,7 @@ div.marked:hover {
 
 @media (max-width: 640px) {
   main {
-    margin: 40px auto;
+    margin: 0 auto;
     max-width: 350px;
   }
 
