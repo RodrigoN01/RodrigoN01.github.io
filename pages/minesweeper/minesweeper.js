@@ -29,7 +29,8 @@ function startGame() {
   document.querySelector('.restart-btn').addEventListener('click', restartGame);
 }
 
-function checkForWin() {
+function checkForWin(e) {
+  e.preventDefault();
   let winner = true;
   board.cells.forEach((cell) => {
     if ((cell.isMine && !cell.isMarked) || (!cell.isMine && cell.hidden)) {
