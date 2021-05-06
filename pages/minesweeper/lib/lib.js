@@ -12,7 +12,7 @@ function initBoard() {
     );
     return null;
   }
-  displayMessage('There are bugs 🪲🪲 in your code 🔍');
+  displayMessage('There are bugs 🪲🪲 in your code 🔍🔍');
   board.cells.sort(cellCompare);
   var boardNode = document.getElementsByClassName('board')[0];
   drawBoard(boardNode);

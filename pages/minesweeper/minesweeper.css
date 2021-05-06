@@ -21,6 +21,7 @@ main {
   margin: 1em 0;
   font-size: 1.5rem;
   font-weight: bold;
+  text-align: center;
 }
 
 .board {
@@ -89,12 +90,17 @@ div.marked:hover {
 }
 
 @media (max-width: 640px) {
+  main {
+    margin: 40px auto;
+    max-width: 350px;
+  }
+
   .board {
-    max-width: 455px;
+    max-width: 340px;
   }
 
   .board div {
-    width: 67px;
-    height: 67px;
+    width: 50px;
+    height: 50px;
   }
 }
