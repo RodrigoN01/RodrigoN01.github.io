@@ -25,8 +25,13 @@ function startGame() {
 
   initBoard();
   document.addEventListener('click', checkForWin);
-  document.addEventListener('contextmenu', checkForWin);
+  document.addEventListener('long-press', checkForWin);
   document.querySelector('.restart-btn').addEventListener('click', restartGame);
+}
+
+function endGame() {
+  document.removeEventListener('click', checkForWin);
+  document.removeEventListener('long-press', checkForWin);
 }
 
 function checkForWin() {
@@ -39,6 +44,8 @@ function checkForWin() {
 
   if (winner) {
     displayMessage('🕵🏻‍♂️ BUGS NEUTRALIZED 🕵🏻‍♂️');
+    endGame();
+    removeListeners();
   }
 }
 

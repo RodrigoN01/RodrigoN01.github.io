@@ -227,6 +227,10 @@ function removeListeners() {
   var board = document.getElementsByClassName('board')[0];
   var clone = board.cloneNode(true);
   board.parentNode.replaceChild(clone, board);
+  for (let i = 0; i < board.children.length; i++) {
+    board.children[i].removeEventListener('click', showCell);
+    board.children[i].removeEventListener('contextmenu', markCell);
+  }
 }
 
 // Convert classLists and HTMLCollections
