@@ -25,13 +25,13 @@ function startGame() {
 
   initBoard();
   document.addEventListener('click', checkForWin);
-  document.addEventListener('long-press', checkForWin);
+  document.addEventListener('contextmenu', checkForWin);
   document.querySelector('.restart-btn').addEventListener('click', restartGame);
 }
 
 function endGame() {
   document.removeEventListener('click', checkForWin);
-  document.removeEventListener('long-press', checkForWin);
+  document.removeEventListener('contextmenu', checkForWin);
 }
 
 function checkForWin() {
