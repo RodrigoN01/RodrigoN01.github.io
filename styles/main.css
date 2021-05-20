@@ -348,10 +348,20 @@ header {
   text-decoration: none;
 }
 
+.articles-item a span {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
 /* Articles Page */
 
 .blog-title {
   margin-bottom: 3rem;
+}
+
+.blog-title span {
+  font-size: 1.2rem;
+  font-style: italic;
 }
 
 .blog .blog-article h3 {
